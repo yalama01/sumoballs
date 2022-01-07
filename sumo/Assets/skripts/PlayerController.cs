@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     // for refrences
     private GameObject focalPoint;
+    public GameObject endscreen;
     Rigidbody rb;
 
 
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         rb = GetComponent<Rigidbody>();
         focalPoint = GameObject.Find("CameraPivot");
     }
@@ -38,6 +40,14 @@ public class PlayerController : MonoBehaviour
 
         // indicator follows player
         powerUpInd.transform.position = transform.position;
+
+        //end play
+        if (transform.position.y <= -10)
+        {
+            endscreen.SetActive(true);
+            Time.timeScale = 0;
+
+        }
         
 
 

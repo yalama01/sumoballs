@@ -1236,6 +1236,10 @@ PrefabInstance:
       propertyPath: powerUpInd
       value: 
       objectReference: {fileID: 2035174846}
+    - target: {fileID: 4531261936988923902, guid: 54ea5683898e8b540863516aa8cd1c35, type: 3}
+      propertyPath: playerSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4531261936988923903, guid: 54ea5683898e8b540863516aa8cd1c35, type: 3}
       propertyPath: m_RootOrder
       value: 5

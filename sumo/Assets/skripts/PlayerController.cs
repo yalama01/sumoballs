@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float playerSpeed = 5f;
+    public float playerSpeed = 10f;
     float forwardInput;
     float sideInput;
     private float PowerUpStrangth = 15;
@@ -34,9 +34,7 @@ public class PlayerController : MonoBehaviour
         forwardInput = Input.GetAxis("Vertical");
         sideInput = Input.GetAxis("Horizontal");
 
-        //
-        rb.AddForce(focalPoint.transform.forward * forwardInput * playerSpeed);
-        rb.AddForce(focalPoint.transform.right * sideInput * playerSpeed);
+ 
 
         // indicator follows player
         powerUpInd.transform.position = transform.position;
@@ -49,6 +47,17 @@ public class PlayerController : MonoBehaviour
 
         }
         
+
+
+    }
+
+
+    private void FixedUpdate()
+    {
+
+        //
+        rb.AddForce(focalPoint.transform.forward * forwardInput * playerSpeed);
+        rb.AddForce(focalPoint.transform.right * sideInput * playerSpeed);
 
 
     }
